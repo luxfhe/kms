@@ -1,0 +1,51 @@
+{
+  "name": "@luxfhe/kms",
+  "version": "0.1.2",
+  "description": "LuxFHE KMS bindings for web and node",
+  "type": "module",
+  "main": "./dist/node/index.js",
+  "module": "./dist/web/index.js",
+  "types": "./dist/web/index.d.ts",
+  "exports": {
+    ".": {
+      "node": {
+        "types": "./dist/node/index.d.ts",
+        "import": "./dist/node/index.js",
+        "require": "./dist/node/index.cjs"
+      },
+      "default": {
+        "types": "./dist/web/index.d.ts",
+        "import": "./dist/web/index.js",
+        "require": "./dist/web/index.cjs"
+      }
+    },
+    "./node": {
+      "types": "./dist/node/index.d.ts",
+      "import": "./dist/node/index.js",
+      "require": "./dist/node/index.cjs"
+    },
+    "./web": {
+      "types": "./dist/web/index.d.ts",
+      "import": "./dist/web/index.js",
+      "require": "./dist/web/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "dependencies": {
+    "tkms": "^0.12.0",
+    "node-tkms": "^0.12.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}
