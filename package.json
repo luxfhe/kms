@@ -1,6 +1,6 @@
 {
   "name": "@luxfhe/kms",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "LuxFHE KMS bindings for web and node",
   "type": "module",
   "main": "./dist/node/index.js",

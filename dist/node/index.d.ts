@@ -16,6 +16,7 @@ interface EncryptionResult {
  * InitInput type for backward compatibility with Zama TKMS
  */
 type InitInput = string | URL | ArrayBuffer | WebAssembly.Module;
+declare const InitInput: InitInput;
 /**
  * Generate a new FHE key pair
  */
@@ -90,4 +91,4 @@ declare function initKMS(options?: {
     module_or_path?: InitInput;
 }): Promise<void>;
 
-export { type EncryptionResult, type InitInput, type KeyPair, MlKemPkePk, MlKemPkeSk, decrypt, initKMS as default, encrypt, generateKeyPair, ml_kem_pke_get_pk, ml_kem_pke_keygen, ml_kem_pke_pk_to_u8vec, ml_kem_pke_sk_to_u8vec, new_client, new_server_id_addr, process_user_decryption_resp_from_js, u8vec_to_ml_kem_pke_pk, u8vec_to_ml_kem_pke_sk };
+export { type EncryptionResult, InitInput, type KeyPair, MlKemPkePk, MlKemPkeSk, decrypt, initKMS as default, encrypt, generateKeyPair, ml_kem_pke_get_pk, ml_kem_pke_keygen, ml_kem_pke_pk_to_u8vec, ml_kem_pke_sk_to_u8vec, new_client, new_server_id_addr, process_user_decryption_resp_from_js, u8vec_to_ml_kem_pke_pk, u8vec_to_ml_kem_pke_sk };

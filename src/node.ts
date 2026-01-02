@@ -20,6 +20,9 @@ export interface EncryptionResult {
  */
 export type InitInput = string | URL | ArrayBuffer | WebAssembly.Module;
 
+// Runtime placeholder for InitInput (needed for rollup bundling)
+export const InitInput = null as unknown as InitInput;
+
 /**
  * Generate a new FHE key pair
  */
