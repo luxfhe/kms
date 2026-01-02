@@ -131,7 +131,7 @@ export class KMSClient {
    * This initiates the MPC decryption protocol where t-of-n parties
    * contribute partial decryptions to reconstruct the plaintext.
    */
-  async requestDecryption(request: DecryptionRequest): Promise<DecryptionResponse> {
+  async decryption(request: DecryptionRequest): Promise<DecryptionResponse> {
     const res = await fetch(`${this.config.serverUrl}/threshold/decrypt`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
