@@ -20,6 +20,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // src/node.ts
 var node_exports = {};
 __export(node_exports, {
+  InitInput: () => InitInput,
   MlKemPkePk: () => MlKemPkePk,
   MlKemPkeSk: () => MlKemPkeSk,
   decrypt: () => decrypt,
@@ -37,6 +38,7 @@ __export(node_exports, {
   u8vec_to_ml_kem_pke_sk: () => u8vec_to_ml_kem_pke_sk
 });
 module.exports = __toCommonJS(node_exports);
+var InitInput = null;
 async function generateKeyPair() {
   throw new Error("KMS key generation not yet implemented. Use @luxfhe/wasm directly.");
 }
@@ -102,6 +104,7 @@ async function initKMS(options) {
 }
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  InitInput,
   MlKemPkePk,
   MlKemPkeSk,
   decrypt,

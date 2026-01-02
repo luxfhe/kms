@@ -1,4 +1,5 @@
 // src/web.ts
+var InitInput = null;
 async function generateKeyPair() {
   throw new Error("KMS key generation not yet implemented. Use @luxfhe/wasm directly.");
 }
@@ -63,6 +64,7 @@ function ml_kem_pke_get_pk(sk) {
 async function initKMS(options) {
 }
 export {
+  InitInput,
   MlKemPkePk,
   MlKemPkeSk,
   decrypt,
