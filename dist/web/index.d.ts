@@ -2,7 +2,7 @@
  * LuxFHE KMS Web bindings
  *
  * Native Go FHE key management for browser
- * Includes backward-compatible exports for Zama TKMS interface
+ * Includes backward-compatible exports for legacy TKMS interface
  */
 interface KeyPair {
     publicKey: Uint8Array;
@@ -13,7 +13,7 @@ interface EncryptionResult {
     publicKey: Uint8Array;
 }
 /**
- * InitInput type for backward compatibility with Zama TKMS
+ * InitInput type for backward compatibility with legacy TKMS
  */
 type InitInput = string | URL | Request | Response | ArrayBuffer | WebAssembly.Module;
 declare const InitInput: InitInput;
@@ -85,7 +85,7 @@ declare function ml_kem_pke_sk_to_u8vec(sk: MlKemPkeSk): Uint8Array;
  */
 declare function ml_kem_pke_get_pk(sk: MlKemPkeSk): MlKemPkePk;
 /**
- * Default export matching Zama TKMS init signature
+ * Default export matching legacy TKMS init signature
  */
 declare function initKMS(options?: {
     module_or_path?: InitInput;
